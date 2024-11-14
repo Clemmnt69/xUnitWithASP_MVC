@@ -3,6 +3,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+// Enregistrer ProductService et ProductRepository pour l'injection de dépendances
+builder.Services.AddScoped<ProductService>();
+builder.Services.AddScoped<ProductRepository>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
